@@ -5,7 +5,7 @@
  * File: _coder_ParalaxCalc_fixpt_api.c
  *
  * MATLAB Coder version            : 5.1
- * C/C++ source code generated on  : 24-Feb-2021 21:34:46
+ * C/C++ source code generated on  : 28-Feb-2021 17:26:06
  */
 
 /* Include Files */
@@ -18,6 +18,7 @@ static const mxArray *eml_mx;
 static const mxArray *b_eml_mx;
 static const mxArray *c_eml_mx;
 static const mxArray *d_eml_mx;
+static const mxArray *e_eml_mx;
 emlrtContext emlrtContextGlobal = { true,/* bFirstTime */
   false,                               /* bInitialized */
   131595U,                             /* fVersionInfo */
@@ -37,20 +38,20 @@ static emlrtMCInfo emlrtMCI = { -1,    /* lineNo */
 
 /* Function Declarations */
 static void ParalaxCalc_fixpt_once(const emlrtStack *sp);
-static uint16_T b_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
+static uint32_T b_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
   emlrtMsgIdentifier *parentId);
-static const mxArray *b_emlrt_marshallOut(const emlrtStack *sp, const uint16_T u);
-static uint16_T c_emlrt_marshallIn(const emlrtStack *sp, const mxArray *el_in,
+static const mxArray *b_emlrt_marshallOut(const emlrtStack *sp, const uint32_T u);
+static uint32_T c_emlrt_marshallIn(const emlrtStack *sp, const mxArray *el_in,
   const char_T *identifier);
-static const mxArray *c_emlrt_marshallOut(const emlrtStack *sp, const uint16_T u);
-static uint16_T d_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
+static const mxArray *c_emlrt_marshallOut(const emlrtStack *sp, const uint32_T u);
+static uint32_T d_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
   emlrtMsgIdentifier *parentId);
-static uint16_T e_emlrt_marshallIn(const emlrtStack *sp, const mxArray *r_in_1,
+static uint32_T e_emlrt_marshallIn(const emlrtStack *sp, const mxArray *r_in,
   const char_T *identifier);
-static uint16_T emlrt_marshallIn(const emlrtStack *sp, const mxArray *az_in,
+static uint32_T emlrt_marshallIn(const emlrtStack *sp, const mxArray *az_in,
   const char_T *identifier);
-static const mxArray *emlrt_marshallOut(const emlrtStack *sp, const uint16_T u);
-static uint16_T f_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
+static const mxArray *emlrt_marshallOut(const emlrtStack *sp, const uint32_T u);
+static uint32_T f_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
   emlrtMsgIdentifier *parentId);
 static const mxArray *fimath(const emlrtStack *sp, const char_T *b, const char_T
   *c, const char_T *d, const char_T *e, const char_T *f, const char_T *g, const
@@ -62,7 +63,7 @@ static const mxArray *fimath(const emlrtStack *sp, const char_T *b, const char_T
   char_T *ib, real_T jb, const char_T *kb, real_T lb, const char_T *mb,
   boolean_T nb, const char_T *ob, real_T pb, const char_T *qb, real_T rb,
   emlrtMCInfo *location);
-static uint16_T g_emlrt_marshallIn(const mxArray *src);
+static uint32_T g_emlrt_marshallIn(const mxArray *src);
 static const mxArray *numerictype(const emlrtStack *sp, const char_T *b,
   boolean_T c, const char_T *d, const char_T *e, const char_T *f, real_T g,
   const char_T *h, real_T i, const char_T *j, real_T k, const char_T *l, real_T
@@ -75,24 +76,28 @@ static const mxArray *numerictype(const emlrtStack *sp, const char_T *b,
  */
 static void ParalaxCalc_fixpt_once(const emlrtStack *sp)
 {
+  emlrtAssignP(&e_eml_mx, NULL);
   emlrtAssignP(&d_eml_mx, NULL);
   emlrtAssignP(&c_eml_mx, NULL);
   emlrtAssignP(&b_eml_mx, NULL);
   emlrtAssignP(&eml_mx, NULL);
+  emlrtAssignP(&e_eml_mx, numerictype(sp, "SignednessBool", false, "Signedness",
+    "Unsigned", "WordLength", 32.0, "FractionLength", 16.0, "BinaryPoint", 16.0,
+    "Slope", 1.52587890625E-5, "FixedExponent", -16.0, &emlrtMCI));
   emlrtAssignP(&d_eml_mx, numerictype(sp, "SignednessBool", false, "Signedness",
-    "Unsigned", "WordLength", 14.0, "FractionLength", 0.0, "BinaryPoint", 0.0,
-    "Slope", 1.0, "FixedExponent", 0.0, &emlrtMCI));
+    "Unsigned", "WordLength", 32.0, "FractionLength", 18.0, "BinaryPoint", 18.0,
+    "Slope", 3.814697265625E-6, "FixedExponent", -18.0, &emlrtMCI));
   emlrtAssignP(&c_eml_mx, numerictype(sp, "SignednessBool", false, "Signedness",
-    "Unsigned", "WordLength", 13.0, "FractionLength", 0.0, "BinaryPoint", 0.0,
-    "Slope", 1.0, "FixedExponent", 0.0, &emlrtMCI));
+    "Unsigned", "WordLength", 32.0, "FractionLength", 19.0, "BinaryPoint", 19.0,
+    "Slope", 1.9073486328125E-6, "FixedExponent", -19.0, &emlrtMCI));
   emlrtAssignP(&b_eml_mx, numerictype(sp, "SignednessBool", false, "Signedness",
-    "Unsigned", "WordLength", 15.0, "FractionLength", 0.0, "BinaryPoint", 0.0,
-    "Slope", 1.0, "FixedExponent", 0.0, &emlrtMCI));
+    "Unsigned", "WordLength", 32.0, "FractionLength", 17.0, "BinaryPoint", 17.0,
+    "Slope", 7.62939453125E-6, "FixedExponent", -17.0, &emlrtMCI));
   emlrtAssignP(&eml_mx, fimath(sp, "RoundMode", "floor", "RoundingMethod",
     "Floor", "OverflowMode", "wrap", "OverflowAction", "Wrap", "ProductMode",
-    "FullPrecision", "SumMode", "FullPrecision", "ProductWordLength", 32.0,
-    "SumWordLength", 32.0, "MaxProductWordLength", 65535.0, "MaxSumWordLength",
-    65535.0, "ProductFractionLength", 30.0, "ProductFixedExponent", -30.0,
+    "KeepMSB", "SumMode", "KeepMSB", "ProductWordLength", 64.0, "SumWordLength",
+    64.0, "MaxProductWordLength", 65535.0, "MaxSumWordLength", 65535.0,
+    "ProductFractionLength", 30.0, "ProductFixedExponent", -30.0,
     "SumFractionLength", 30.0, "SumFixedExponent", -30.0,
     "SumSlopeAdjustmentFactor", 1.0, "SumBias", 0.0,
     "ProductSlopeAdjustmentFactor", 1.0, "ProductBias", 0.0, "CastBeforeSum",
@@ -104,13 +109,13 @@ static void ParalaxCalc_fixpt_once(const emlrtStack *sp)
  * Arguments    : const emlrtStack *sp
  *                const mxArray *u
  *                const emlrtMsgIdentifier *parentId
- * Return Type  : uint16_T
+ * Return Type  : uint32_T
  */
-static uint16_T b_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
+static uint32_T b_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
   emlrtMsgIdentifier *parentId)
 {
   static const int32_T dims = 0;
-  uint16_T y;
+  uint32_T y;
   emlrtCheckFiR2012b(sp, parentId, u, false, 0U, &dims, eml_mx, b_eml_mx);
   y = g_emlrt_marshallIn(emlrtAlias(u));
   emlrtDestroyArray(&u);
@@ -119,18 +124,18 @@ static uint16_T b_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
 
 /*
  * Arguments    : const emlrtStack *sp
- *                const uint16_T u
+ *                const uint32_T u
  * Return Type  : const mxArray *
  */
-static const mxArray *b_emlrt_marshallOut(const emlrtStack *sp, const uint16_T u)
+static const mxArray *b_emlrt_marshallOut(const emlrtStack *sp, const uint32_T u)
 {
   const mxArray *b_y;
   const mxArray *m;
   const mxArray *y;
   y = NULL;
   b_y = NULL;
-  m = emlrtCreateNumericMatrix(1, 1, mxUINT16_CLASS, mxREAL);
-  *(uint16_T *)emlrtMxGetData(m) = u;
+  m = emlrtCreateNumericMatrix(1, 1, (int32_T)mxUINT32_CLASS, (int32_T)mxREAL);
+  *((uint32_T *)emlrtMxGetData(m)) = u;
   emlrtAssign(&b_y, m);
   emlrtAssign(&y, emlrtCreateFIR2013b(sp, eml_mx, c_eml_mx, "simulinkarray", b_y,
     true, false));
@@ -141,13 +146,13 @@ static const mxArray *b_emlrt_marshallOut(const emlrtStack *sp, const uint16_T u
  * Arguments    : const emlrtStack *sp
  *                const mxArray *el_in
  *                const char_T *identifier
- * Return Type  : uint16_T
+ * Return Type  : uint32_T
  */
-static uint16_T c_emlrt_marshallIn(const emlrtStack *sp, const mxArray *el_in,
+static uint32_T c_emlrt_marshallIn(const emlrtStack *sp, const mxArray *el_in,
   const char_T *identifier)
 {
   emlrtMsgIdentifier thisId;
-  uint16_T y;
+  uint32_T y;
   thisId.fIdentifier = (const char_T *)identifier;
   thisId.fParent = NULL;
   thisId.bParentIsCell = false;
@@ -158,18 +163,18 @@ static uint16_T c_emlrt_marshallIn(const emlrtStack *sp, const mxArray *el_in,
 
 /*
  * Arguments    : const emlrtStack *sp
- *                const uint16_T u
+ *                const uint32_T u
  * Return Type  : const mxArray *
  */
-static const mxArray *c_emlrt_marshallOut(const emlrtStack *sp, const uint16_T u)
+static const mxArray *c_emlrt_marshallOut(const emlrtStack *sp, const uint32_T u)
 {
   const mxArray *b_y;
   const mxArray *m;
   const mxArray *y;
   y = NULL;
   b_y = NULL;
-  m = emlrtCreateNumericMatrix(1, 1, mxUINT16_CLASS, mxREAL);
-  *(uint16_T *)emlrtMxGetData(m) = u;
+  m = emlrtCreateNumericMatrix(1, 1, (int32_T)mxUINT32_CLASS, (int32_T)mxREAL);
+  *((uint32_T *)emlrtMxGetData(m)) = u;
   emlrtAssign(&b_y, m);
   emlrtAssign(&y, emlrtCreateFIR2013b(sp, eml_mx, d_eml_mx, "simulinkarray", b_y,
     true, false));
@@ -180,13 +185,13 @@ static const mxArray *c_emlrt_marshallOut(const emlrtStack *sp, const uint16_T u
  * Arguments    : const emlrtStack *sp
  *                const mxArray *u
  *                const emlrtMsgIdentifier *parentId
- * Return Type  : uint16_T
+ * Return Type  : uint32_T
  */
-static uint16_T d_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
+static uint32_T d_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
   emlrtMsgIdentifier *parentId)
 {
   static const int32_T dims = 0;
-  uint16_T y;
+  uint32_T y;
   emlrtCheckFiR2012b(sp, parentId, u, false, 0U, &dims, eml_mx, c_eml_mx);
   y = g_emlrt_marshallIn(emlrtAlias(u));
   emlrtDestroyArray(&u);
@@ -195,20 +200,20 @@ static uint16_T d_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
 
 /*
  * Arguments    : const emlrtStack *sp
- *                const mxArray *r_in_1
+ *                const mxArray *r_in
  *                const char_T *identifier
- * Return Type  : uint16_T
+ * Return Type  : uint32_T
  */
-static uint16_T e_emlrt_marshallIn(const emlrtStack *sp, const mxArray *r_in_1,
+static uint32_T e_emlrt_marshallIn(const emlrtStack *sp, const mxArray *r_in,
   const char_T *identifier)
 {
   emlrtMsgIdentifier thisId;
-  uint16_T y;
+  uint32_T y;
   thisId.fIdentifier = (const char_T *)identifier;
   thisId.fParent = NULL;
   thisId.bParentIsCell = false;
-  y = f_emlrt_marshallIn(sp, emlrtAlias(r_in_1), &thisId);
-  emlrtDestroyArray(&r_in_1);
+  y = f_emlrt_marshallIn(sp, emlrtAlias(r_in), &thisId);
+  emlrtDestroyArray(&r_in);
   return y;
 }
 
@@ -216,13 +221,13 @@ static uint16_T e_emlrt_marshallIn(const emlrtStack *sp, const mxArray *r_in_1,
  * Arguments    : const emlrtStack *sp
  *                const mxArray *az_in
  *                const char_T *identifier
- * Return Type  : uint16_T
+ * Return Type  : uint32_T
  */
-static uint16_T emlrt_marshallIn(const emlrtStack *sp, const mxArray *az_in,
+static uint32_T emlrt_marshallIn(const emlrtStack *sp, const mxArray *az_in,
   const char_T *identifier)
 {
   emlrtMsgIdentifier thisId;
-  uint16_T y;
+  uint32_T y;
   thisId.fIdentifier = (const char_T *)identifier;
   thisId.fParent = NULL;
   thisId.bParentIsCell = false;
@@ -233,20 +238,20 @@ static uint16_T emlrt_marshallIn(const emlrtStack *sp, const mxArray *az_in,
 
 /*
  * Arguments    : const emlrtStack *sp
- *                const uint16_T u
+ *                const uint32_T u
  * Return Type  : const mxArray *
  */
-static const mxArray *emlrt_marshallOut(const emlrtStack *sp, const uint16_T u)
+static const mxArray *emlrt_marshallOut(const emlrtStack *sp, const uint32_T u)
 {
   const mxArray *b_y;
   const mxArray *m;
   const mxArray *y;
   y = NULL;
   b_y = NULL;
-  m = emlrtCreateNumericMatrix(1, 1, mxUINT16_CLASS, mxREAL);
-  *(uint16_T *)emlrtMxGetData(m) = u;
+  m = emlrtCreateNumericMatrix(1, 1, (int32_T)mxUINT32_CLASS, (int32_T)mxREAL);
+  *((uint32_T *)emlrtMxGetData(m)) = u;
   emlrtAssign(&b_y, m);
-  emlrtAssign(&y, emlrtCreateFIR2013b(sp, eml_mx, b_eml_mx, "simulinkarray", b_y,
+  emlrtAssign(&y, emlrtCreateFIR2013b(sp, eml_mx, e_eml_mx, "simulinkarray", b_y,
     true, false));
   return y;
 }
@@ -255,13 +260,13 @@ static const mxArray *emlrt_marshallOut(const emlrtStack *sp, const uint16_T u)
  * Arguments    : const emlrtStack *sp
  *                const mxArray *u
  *                const emlrtMsgIdentifier *parentId
- * Return Type  : uint16_T
+ * Return Type  : uint32_T
  */
-static uint16_T f_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
+static uint32_T f_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
   emlrtMsgIdentifier *parentId)
 {
   static const int32_T dims = 0;
-  uint16_T y;
+  uint32_T y;
   emlrtCheckFiR2012b(sp, parentId, u, false, 0U, &dims, eml_mx, d_eml_mx);
   y = g_emlrt_marshallIn(emlrtAlias(u));
   emlrtDestroyArray(&u);
@@ -326,7 +331,7 @@ static const mxArray *fimath(const emlrtStack *sp, const char_T *b, const char_T
   boolean_T nb, const char_T *ob, real_T pb, const char_T *qb, real_T rb,
   emlrtMCInfo *location)
 {
-  const mxArray *pArrays[42];
+  static const mxArray *pArrays[42];
   const mxArray *b_m;
   pArrays[0] = emlrtCreateString(b);
   pArrays[1] = emlrtCreateString(c);
@@ -376,14 +381,14 @@ static const mxArray *fimath(const emlrtStack *sp, const char_T *b, const char_T
 
 /*
  * Arguments    : const mxArray *src
- * Return Type  : uint16_T
+ * Return Type  : uint32_T
  */
-static uint16_T g_emlrt_marshallIn(const mxArray *src)
+static uint32_T g_emlrt_marshallIn(const mxArray *src)
 {
   const mxArray *mxInt;
-  uint16_T ret;
+  uint32_T ret;
   mxInt = emlrtImportFiIntArrayR2008b(src);
-  ret = *(uint16_T *)emlrtMxGetData(mxInt);
+  ret = *((uint32_T *)emlrtMxGetData(mxInt));
   emlrtDestroyArray(&mxInt);
   emlrtDestroyArray(&src);
   return ret;
@@ -447,21 +452,21 @@ void ParalaxCalc_fixpt_api(const mxArray * const prhs[3], int32_T nlhs, const
     NULL                               /* prev */
   };
 
-  uint16_T az_in;
-  uint16_T az_out;
-  uint16_T el_in;
-  uint16_T el_out;
-  uint16_T r_in_1;
-  uint16_T r_out;
+  uint32_T az_in;
+  uint32_T az_out;
+  uint32_T el_in;
+  uint32_T el_out;
+  uint32_T r_in;
+  uint32_T r_out;
   st.tls = emlrtRootTLSGlobal;
 
   /* Marshall function inputs */
   az_in = emlrt_marshallIn(&st, emlrtAliasP(prhs[0]), "az_in");
   el_in = c_emlrt_marshallIn(&st, emlrtAliasP(prhs[1]), "el_in");
-  r_in_1 = e_emlrt_marshallIn(&st, emlrtAliasP(prhs[2]), "r_in_1");
+  r_in = e_emlrt_marshallIn(&st, emlrtAliasP(prhs[2]), "r_in");
 
   /* Invoke the target function */
-  ParalaxCalc_fixpt(az_in, el_in, r_in_1, &az_out, &el_out, &r_out);
+  ParalaxCalc_fixpt(az_in, el_in, r_in, &az_out, &el_out, &r_out);
 
   /* Marshall function outputs */
   plhs[0] = emlrt_marshallOut(&st, az_out);
@@ -497,6 +502,7 @@ void ParalaxCalc_fixpt_atexit(void)
   emlrtDestroyArray(&b_eml_mx);
   emlrtDestroyArray(&c_eml_mx);
   emlrtDestroyArray(&d_eml_mx);
+  emlrtDestroyArray(&e_eml_mx);
 }
 
 /*

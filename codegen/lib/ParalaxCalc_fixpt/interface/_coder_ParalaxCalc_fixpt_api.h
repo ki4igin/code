@@ -5,7 +5,7 @@
  * File: _coder_ParalaxCalc_fixpt_api.h
  *
  * MATLAB Coder version            : 5.1
- * C/C++ source code generated on  : 24-Feb-2021 21:34:46
+ * C/C++ source code generated on  : 28-Feb-2021 17:26:06
  */
 
 #ifndef _CODER_PARALAXCALC_FIXPT_API_H
@@ -27,8 +27,8 @@ extern "C" {
 #endif
 
   /* Function Declarations */
-  void ParalaxCalc_fixpt(uint16_T az_in, uint16_T el_in, uint16_T r_in_1,
-    uint16_T *az_out, uint16_T *el_out, uint16_T *r_out);
+  void ParalaxCalc_fixpt(uint32_T az_in, uint32_T el_in, uint32_T r_in, uint32_T
+    *az_out, uint32_T *el_out, uint32_T *r_out);
   void ParalaxCalc_fixpt_api(const mxArray * const prhs[3], int32_T nlhs, const
     mxArray *plhs[3]);
   void ParalaxCalc_fixpt_atexit(void);

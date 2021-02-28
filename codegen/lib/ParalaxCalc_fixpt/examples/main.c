@@ -5,7 +5,7 @@
  * File: main.c
  *
  * MATLAB Coder version            : 5.1
- * C/C++ source code generated on  : 24-Feb-2021 21:34:46
+ * C/C++ source code generated on  : 28-Feb-2021 17:26:06
  */
 
 /*************************************************************************/
@@ -36,17 +36,18 @@
 /* Include Files */
 #include "main.h"
 #include "ParalaxCalc_fixpt.h"
+#include "ParalaxCalc_fixpt_initialize.h"
 
 /* Function Declarations */
-static unsigned short argInit_ufix15(void);
+static uint32_T argInit_ufix32_En17(void);
 static void main_ParalaxCalc_fixpt(void);
 
 /* Function Definitions */
 /*
  * Arguments    : void
- * Return Type  : unsigned short
+ * Return Type  : uint32_T
  */
-static unsigned short argInit_ufix15(void)
+static uint32_T argInit_ufix32_En17(void)
 {
   return 0U;
 }
@@ -57,34 +58,33 @@ static unsigned short argInit_ufix15(void)
  */
 static void main_ParalaxCalc_fixpt(void)
 {
-  unsigned short az_out;
-  unsigned short el_out;
-  unsigned short r_out;
+  uint32_T az_out;
+  uint32_T el_out;
+  uint32_T r_out;
 
   /* Initialize function 'ParalaxCalc_fixpt' input arguments. */
   /* Call the entry-point 'ParalaxCalc_fixpt'. */
-  ParalaxCalc_fixpt(argInit_ufix15(), argInit_ufix15(), argInit_ufix15(),
-                    &az_out, &el_out, &r_out);
+  ParalaxCalc_fixpt(argInit_ufix32_En17(), argInit_ufix32_En17(),
+                    argInit_ufix32_En17(), &az_out, &el_out, &r_out);
 }
 
 /*
- * Arguments    : int argc
+ * Arguments    : int32_T argc
  *                const char * const argv[]
- * Return Type  : int
+ * Return Type  : int32_T
  */
-int main(int argc, const char * const argv[])
+int32_T main(int32_T argc, const char * const argv[])
 {
   (void)argc;
   (void)argv;
 
-  /* The initialize function is being called automatically from your entry-point function. So, a call to initialize is not included here. */
+  /* Initialize the application.
+     You do not need to do this more than one time. */
+  ParalaxCalc_fixpt_initialize();
+
   /* Invoke the entry-point functions.
      You can call entry-point functions multiple times. */
   main_ParalaxCalc_fixpt();
-
-  /* Terminate the application.
-     You do not need to do this more than one time. */
-  ParalaxCalc_fixpt_terminate();
   return 0;
 }
 
