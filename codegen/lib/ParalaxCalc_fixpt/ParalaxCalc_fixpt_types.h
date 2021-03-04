@@ -5,7 +5,7 @@
  * File: ParalaxCalc_fixpt_types.h
  *
  * MATLAB Coder version            : 5.1
- * C/C++ source code generated on  : 28-Feb-2021 17:26:06
+ * C/C++ source code generated on  : 01-Mar-2021 16:38:13
  */
 
 #ifndef PARALAXCALC_FIXPT_TYPES_H
@@ -33,15 +33,6 @@ typedef struct {
 
 #endif                                 /*typedef_uint64m_T*/
 
-#ifndef typedef_int64m_T
-#define typedef_int64m_T
-
-typedef struct {
-  uint32_T chunks[2];
-} int64m_T;
-
-#endif                                 /*typedef_int64m_T*/
-
 #ifndef typedef_int96m_T
 #define typedef_int96m_T
 
@@ -50,6 +41,15 @@ typedef struct {
 } int96m_T;
 
 #endif                                 /*typedef_int96m_T*/
+
+#ifndef typedef_int64m_T
+#define typedef_int64m_T
+
+typedef struct {
+  uint32_T chunks[2];
+} int64m_T;
+
+#endif                                 /*typedef_int64m_T*/
 #endif
 
 /*

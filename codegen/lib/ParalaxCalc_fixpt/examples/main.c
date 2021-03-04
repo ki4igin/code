@@ -5,7 +5,7 @@
  * File: main.c
  *
  * MATLAB Coder version            : 5.1
- * C/C++ source code generated on  : 28-Feb-2021 17:26:06
+ * C/C++ source code generated on  : 01-Mar-2021 16:38:13
  */
 
 /*************************************************************************/
@@ -36,13 +36,22 @@
 /* Include Files */
 #include "main.h"
 #include "ParalaxCalc_fixpt.h"
-#include "ParalaxCalc_fixpt_initialize.h"
 
 /* Function Declarations */
+static int32_T argInit_sfix32_En18(void);
 static uint32_T argInit_ufix32_En17(void);
 static void main_ParalaxCalc_fixpt(void);
 
 /* Function Definitions */
+/*
+ * Arguments    : void
+ * Return Type  : int32_T
+ */
+static int32_T argInit_sfix32_En18(void)
+{
+  return 0;
+}
+
 /*
  * Arguments    : void
  * Return Type  : uint32_T
@@ -58,13 +67,13 @@ static uint32_T argInit_ufix32_En17(void)
  */
 static void main_ParalaxCalc_fixpt(void)
 {
+  int32_T el_out;
   uint32_T az_out;
-  uint32_T el_out;
   uint32_T r_out;
 
   /* Initialize function 'ParalaxCalc_fixpt' input arguments. */
   /* Call the entry-point 'ParalaxCalc_fixpt'. */
-  ParalaxCalc_fixpt(argInit_ufix32_En17(), argInit_ufix32_En17(),
+  ParalaxCalc_fixpt(argInit_ufix32_En17(), argInit_sfix32_En18(),
                     argInit_ufix32_En17(), &az_out, &el_out, &r_out);
 }
 

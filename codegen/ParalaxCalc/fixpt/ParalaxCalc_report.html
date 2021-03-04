@@ -30,7 +30,7 @@
 </style>
 </head>
 <body>
-<h3>Generated on  2021-02-28 18:41:41</h3>
+<h3>Generated on  2021-03-01 16:34:51</h3>
 <p>The following table shows fixed point instrumentation results</p>
 <h2>Fixed-Point Report <span>ParalaxCalc<span></h2>
 <TABLE class="code">
@@ -41,17 +41,17 @@
 <TR>
 <TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
 <TD class="padd"><pre>function [az_out, el_out, r_out] = ParalaxCalc(az_in, el_in, r_in)
-%#codegen
+    %#codegen
     x_base = 29;
     y_base = 17;
     z_base = 11;
 
-%     x_base = 0;
-%     y_base = 0;
-%     z_base = 0;
+    %     x_base = 0;
+    %     y_base = 0;
+    %     z_base = 0;
 
     az_in_rad = az_in * pi / 2^14;
-    el_in_rad = el_in * pi / 2^14;   
+    el_in_rad = el_in * pi / 2^14;
 
     x_in = r_in .* cos(el_in_rad) .* cos(az_in_rad);
     y_in = r_in .* cos(el_in_rad) .* sin(az_in_rad);
@@ -59,11 +59,11 @@
 
     x_out = x_in + x_base;
     y_out = y_in + y_base;
-    z_out = z_in + z_base;       
-    
+    z_out = z_in + z_base;
+
     r_out = sqrt(x_out.^2 + y_out.^2 + z_out.^2);
     el_out_rad = atan2(z_out, sqrt(x_out.^2 + y_out.^2));
-    az_out_rad = atan2(y_out, x_out);    
+    az_out_rad = atan2(y_out, x_out);
 
 </pre></TD>
 </TR>
@@ -75,61 +75,55 @@
 </TR>
 <TR>
 <TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
-<TD class="padd"><pre>    
+<TD class="padd"><pre>
 
     az_out = az_out_rad * 2^14 / pi;
     el_out = el_out_rad * 2^14 / pi;
-    
-    az_out = uint32(az_out);
-    el_out = int32(el_out);
-    r_out = uint32(r_out);
+
+%     az_out = uint32(az_out);
+%     el_out = int32(el_out);
+%     r_out = uint32(r_out);
 end</pre></TD>
 </TR>
 </TABLE>
 <TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th><th>Static Min</th><th>Static Max</th><th>Whole Number</th><th>ProposedType <BR /> (Best For WL = 32)</th></TR><TR class="a">
-<TD class="left">az_in</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">32759</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 32, 17)</TD></TR>
+<TD class="left">az_in</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">32767</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 32, 17)</TD></TR>
 <TR class="b">
-<TD class="left">az_in_rad</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">6.281459578793215</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 32, 29)</TD></TR>
+<TD class="left">az_in_rad</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">6.282993559581101</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 32, 29)</TD></TR>
 <TR class="a">
-<TD class="left">az_out > 1</TD><TD class="left">double</TD><TD class="right">0.9349151832781468</TD><TD class="right">32766.36754371009</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 32, 17)</TD></TR>
+<TD class="left">az_out</TD><TD class="left">double</TD><TD class="right">0.2152797284844836</TD><TD class="right">32767.873296237343</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 32, 17)</TD></TR>
 <TR class="b">
-<TD class="left">az_out > 2</TD><TD class="left">uint32</TD><TD class="right">1</TD><TD class="right">32766</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 32, 17)</TD></TR>
+<TD class="left">az_out_rad</TD><TD class="left">double</TD><TD class="right">-3.1415139058349006</TD><TD class="right">6.283161012037378</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 32, 28)</TD></TR>
 <TR class="a">
-<TD class="left">az_out_rad</TD><TD class="left">double</TD><TD class="right">-3.1415853101129234</TD><TD class="right">6.282872287606363</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 32, 28)</TD></TR>
+<TD class="left">el_in</TD><TD class="left">double</TD><TD class="right">-1025</TD><TD class="right">7281</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(1, 32, 18)</TD></TR>
 <TR class="b">
-<TD class="left">el_in</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">6372</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 32, 19)</TD></TR>
+<TD class="left">el_in_rad</TD><TD class="left">double</TD><TD class="right">-0.19654128844784777</TD><TD class="right">1.3961142645744191</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 32, 30)</TD></TR>
 <TR class="a">
-<TD class="left">el_in_rad</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">1.2218156975509131</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 32, 31)</TD></TR>
+<TD class="left">el_out</TD><TD class="left">double</TD><TD class="right">-1024.8147994431836</TD><TD class="right">7368.852088316048</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 32, 18)</TD></TR>
 <TR class="b">
-<TD class="left">el_out > 1</TD><TD class="left">double</TD><TD class="right">0.5794759459568019</TD><TD class="right">7647.834207321469</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 32, 19)</TD></TR>
+<TD class="left">el_out_rad</TD><TD class="left">double</TD><TD class="right">-0.19650577668584</TD><TD class="right">1.4129596915309754</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 32, 30)</TD></TR>
 <TR class="a">
-<TD class="left">el_out > 2</TD><TD class="left">int32</TD><TD class="right">1</TD><TD class="right">7648</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 32, 19)</TD></TR>
+<TD class="left">r_in</TD><TD class="left">double</TD><TD class="right">103</TD><TD class="right">131066</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 32, 15)</TD></TR>
 <TR class="b">
-<TD class="left">el_out_rad</TD><TD class="left">double</TD><TD class="right">0.00011111312101744902</TD><TD class="right">1.4664538428707181</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 32, 31)</TD></TR>
+<TD class="left">r_out</TD><TD class="left">double</TD><TD class="right">100.18326762624454</TD><TD class="right">131096.02487517142</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 32, 14)</TD></TR>
 <TR class="a">
-<TD class="left">r_in</TD><TD class="left">double</TD><TD class="right">100</TD><TD class="right">100000</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 32, 15)</TD></TR>
-<TR class="b">
-<TD class="left">r_out > 1</TD><TD class="left">double</TD><TD class="right">80.50360930631112</TD><TD class="right">100030.44143580261</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 32, 15)</TD></TR>
-<TR class="a">
-<TD class="left">r_out > 2</TD><TD class="left">uint32</TD><TD class="right">81</TD><TD class="right">100030</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 32, 15)</TD></TR>
-<TR class="b">
 <TD class="left">x_base</TD><TD class="left">double</TD><TD class="right">29</TD><TD class="right">29</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 32, 27)</TD></TR>
-<TR class="a">
-<TD class="left">x_in</TD><TD class="left">double</TD><TD class="right">-99433.36111061057</TD><TD class="right">99518.98936104182</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 32, 14)</TD></TR>
 <TR class="b">
-<TD class="left">x_out</TD><TD class="left">double</TD><TD class="right">-99404.36111061057</TD><TD class="right">99547.98936104182</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 32, 14)</TD></TR>
+<TD class="left">x_in</TD><TD class="left">double</TD><TD class="right">-130940.7131328241</TD><TD class="right">130372.05982999282</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 32, 14)</TD></TR>
 <TR class="a">
+<TD class="left">x_out</TD><TD class="left">double</TD><TD class="right">-130911.7131328241</TD><TD class="right">130401.05982999282</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 32, 14)</TD></TR>
+<TR class="b">
 <TD class="left">y_base</TD><TD class="left">double</TD><TD class="right">17</TD><TD class="right">17</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 32, 27)</TD></TR>
-<TR class="b">
-<TD class="left">y_in</TD><TD class="left">double</TD><TD class="right">-99078.21278565159</TD><TD class="right">98942.25902006825</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 32, 14)</TD></TR>
 <TR class="a">
-<TD class="left">y_out</TD><TD class="left">double</TD><TD class="right">-99061.21278565159</TD><TD class="right">98959.25902006825</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 32, 14)</TD></TR>
+<TD class="left">y_in</TD><TD class="left">double</TD><TD class="right">-130040.34452461335</TD><TD class="right">130538.46871011416</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 32, 14)</TD></TR>
 <TR class="b">
+<TD class="left">y_out</TD><TD class="left">double</TD><TD class="right">-130023.34452461335</TD><TD class="right">130555.46871011416</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 32, 14)</TD></TR>
+<TR class="a">
 <TD class="left">z_base</TD><TD class="left">double</TD><TD class="right">11</TD><TD class="right">11</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 32, 28)</TD></TR>
-<TR class="a">
-<TD class="left">z_in</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">93623.109978122</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 32, 15)</TD></TR>
 <TR class="b">
-<TD class="left">z_out</TD><TD class="left">double</TD><TD class="right">11</TD><TD class="right">93634.109978122</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 32, 15)</TD></TR>
+<TD class="left">z_in</TD><TD class="left">double</TD><TD class="right">-25486.139181878727</TD><TD class="right">128897.71195262311</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 32, 14)</TD></TR>
+<TR class="a">
+<TD class="left">z_out</TD><TD class="left">double</TD><TD class="right">-25475.139181878727</TD><TD class="right">128908.71195262311</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 32, 14)</TD></TR>
 </TABLE>
 
 </body>

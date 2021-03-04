@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.coder" plugin-version="R2018b">
-  <configuration build-checksum="274928835" file="D:\WorkDir\Laborant\Paralaks\code\ParalaxCalc.prj" location="D:\WorkDir\Laborant\Paralaks\code" name="ParalaxCalc" target="target.unifiedcoder" target-name="MATLAB Coder">
+  <configuration build-checksum="1615265504" file="D:\WorkDir\Laborant\Paralaks\code\ParalaxCalc.prj" location="D:\WorkDir\Laborant\Paralaks\code" name="ParalaxCalc" target="target.unifiedcoder" target-name="MATLAB Coder">
     <profile key="profile.mex">
       <param.BuiltInstrumentedMex />
       <param.RanInstrumentedMex>false</param.RanInstrumentedMex>
@@ -20,7 +20,7 @@
       <param.RowMajor>option.RowMajor.ColumnMajor</param.RowMajor>
       <param.HighlightPotentialRowMajorIssues>true</param.HighlightPotentialRowMajorIssues>
       <param.PreserveArrayDimensions>false</param.PreserveArrayDimensions>
-      <param.EliminateSingleDimensions />
+      <param.EliminateSingleDimensions>false</param.EliminateSingleDimensions>
       <param.StackUsageMax>200000</param.StackUsageMax>
       <param.FilePartitionMethod>option.FilePartitionMethod.MapMFileToCFile</param.FilePartitionMethod>
       <param.GenerateComments>true</param.GenerateComments>
@@ -33,10 +33,10 @@
       <param.ReportInfoVarName />
       <param.DefaultTestFile />
       <param.MergeInstrumentationResults>false</param.MergeInstrumentationResults>
-      <param.VerificationMode />
+      <param.VerificationMode>option.VerificationMode.None</param.VerificationMode>
       <param.VerificationStatus>option.VerificationStatus.Passed</param.VerificationStatus>
       <param.EnableMexProfiling>false</param.EnableMexProfiling>
-      <var.BuiltWithMexProfiling />
+      <var.BuiltWithMexProfiling>false</var.BuiltWithMexProfiling>
       <param.CustomSourceCode />
       <param.CustomHeaderCode />
       <param.CustomInitializer />
@@ -66,9 +66,9 @@
       <param.EnableJIT>false</param.EnableJIT>
       <param.EnableJITSilentBailOut />
       <param.CheckForIssuesJIT>true</param.CheckForIssuesJIT>
-      <param.EnableGitSupport />
-      <param.EnableAutoCommit />
-      <param.RepositoryStyle />
+      <param.EnableGitSupport>false</param.EnableGitSupport>
+      <param.EnableAutoCommit>false</param.EnableAutoCommit>
+      <param.RepositoryStyle>option.RepositoryStyle.Auto</param.RepositoryStyle>
       <unset>
         <param.BuiltInstrumentedMex />
         <param.RanInstrumentedMex />
@@ -143,7 +143,7 @@
       <param.WorkingFolder>option.WorkingFolder.Project</param.WorkingFolder>
       <param.SpecifiedWorkingFolder />
       <param.BuildFolder>option.BuildFolder.Project</param.BuildFolder>
-      <param.SpecifiedBuildFolder />
+      <param.SpecifiedBuildFolder>src</param.SpecifiedBuildFolder>
       <param.SearchPaths />
       <param.SaturateOnIntegerOverflow>false</param.SaturateOnIntegerOverflow>
       <param.PurelyIntegerCode>false</param.PurelyIntegerCode>
@@ -156,10 +156,10 @@
       <param.RowMajor>option.RowMajor.ColumnMajor</param.RowMajor>
       <param.HighlightPotentialRowMajorIssues>false</param.HighlightPotentialRowMajorIssues>
       <param.PreserveArrayDimensions>false</param.PreserveArrayDimensions>
-      <param.EliminateSingleDimensions />
+      <param.EliminateSingleDimensions>false</param.EliminateSingleDimensions>
       <param.StackUsageMax>200</param.StackUsageMax>
       <param.MultiInstanceCode>false</param.MultiInstanceCode>
-      <param.FilePartitionMethod>option.FilePartitionMethod.MapMFileToCFile</param.FilePartitionMethod>
+      <param.FilePartitionMethod>option.FilePartitionMethod.SingleFile</param.FilePartitionMethod>
       <param.GenerateComments>true</param.GenerateComments>
       <param.CommentStyle>option.CommentStyle.Auto</param.CommentStyle>
       <param.MATLABSourceComments>false</param.MATLABSourceComments>
@@ -216,7 +216,7 @@
       <param.DefaultTestFile />
       <param.MergeInstrumentationResults>false</param.MergeInstrumentationResults>
       <param.RanPilSilVerification>false</param.RanPilSilVerification>
-      <param.VerificationMode />
+      <param.VerificationMode>option.VerificationMode.None</param.VerificationMode>
       <param.VerificationStatus>option.VerificationStatus.Inactive</param.VerificationStatus>
       <param.CustomSourceCode />
       <param.CustomHeaderCode />
@@ -228,7 +228,7 @@
       <param.PostCodeGenCommand />
       <param.TargetLangStandard>C99 (ISO)</param.TargetLangStandard>
       <param.CodeReplacementLibrary>ARM Cortex-M</param.CodeReplacementLibrary>
-      <param.DeprecatedCRLFlag />
+      <param.DeprecatedCRLFlag>false</param.DeprecatedCRLFlag>
       <param.SameHardware>true</param.SameHardware>
       <param.Toolchain>GNU Tools for ARM Embedded Processors</param.Toolchain>
       <param.BuildConfiguration>Faster Runs</param.BuildConfiguration>
@@ -239,7 +239,7 @@
       <param.target.ActiveTarget>ARM Cortex-M3 (QEMU)</param.target.ActiveTarget>
       <param.HardwareVendor.Production>ARM Compatible</param.HardwareVendor.Production>
       <param.HardwareType.Production>ARM Cortex</param.HardwareType.Production>
-      <param.HWDeviceType.Production />
+      <param.HWDeviceType.Production>ARM Compatible-&gt;ARM Cortex</param.HWDeviceType.Production>
       <var.instance.enabled.Production>true</var.instance.enabled.Production>
       <param.HardwareSizeChar.Production>8</param.HardwareSizeChar.Production>
       <param.HardwareSizeShort.Production>16</param.HardwareSizeShort.Production>
@@ -260,7 +260,7 @@
       <param.HardwareDivisionRounding.Production>option.HardwareDivisionRounding.Zero</param.HardwareDivisionRounding.Production>
       <param.HardwareVendor.Target>ARM Compatible</param.HardwareVendor.Target>
       <param.HardwareType.Target>ARM Cortex</param.HardwareType.Target>
-      <param.HWDeviceType.Target />
+      <param.HWDeviceType.Target>ARM Compatible-&gt;ARM Cortex</param.HWDeviceType.Target>
       <var.instance.enabled.Target>false</var.instance.enabled.Target>
       <param.HardwareSizeChar.Target>8</param.HardwareSizeChar.Target>
       <param.HardwareSizeShort.Target>16</param.HardwareSizeShort.Target>
@@ -279,7 +279,7 @@
       <param.HardwareAtomicIntegerSize.Target>option.HardwareAtomicIntegerSize.Long</param.HardwareAtomicIntegerSize.Target>
       <param.HardwareAtomicFloatSize.Target>option.HardwareAtomicFloatSize.Double</param.HardwareAtomicFloatSize.Target>
       <param.HardwareDivisionRounding.Target>option.HardwareDivisionRounding.Zero</param.HardwareDivisionRounding.Target>
-      <var.SuppressHardwareChange />
+      <var.SuppressHardwareChange>false</var.SuppressHardwareChange>
       <param.CastingMode>option.CastingMode.Standards</param.CastingMode>
       <param.IndentStyle>option.IndentStyle.K&amp;R</param.IndentStyle>
       <param.IndentSize>2</param.IndentSize>
@@ -315,22 +315,21 @@
       <param.GenerateDefaultInSwitch>true</param.GenerateDefaultInSwitch>
       <param.EnableTraceability>true</param.EnableTraceability>
       <param.UseECoderFeatures>true</param.UseECoderFeatures>
-      <param.EnableGitSupport />
-      <param.EnableAutoCommit />
-      <param.RepositoryStyle />
-      <param.psCustomPrjState />
+      <param.EnableGitSupport>false</param.EnableGitSupport>
+      <param.EnableAutoCommit>false</param.EnableAutoCommit>
+      <param.RepositoryStyle>option.RepositoryStyle.Auto</param.RepositoryStyle>
+      <param.psCustomPrjState>false</param.psCustomPrjState>
       <param.psCustomProjectFile />
-      <param.psCheckConfValue />
-      <param.psUniqueOutPutState />
-      <param.psOpenResultsState />
-      <param.psProductModeValue />
-      <param.psQuickConfValue />
-      <param.psOutputFolder />
+      <param.psCheckConfValue>option.psCheckConfValue.onWarnCheckConfDlg</param.psCheckConfValue>
+      <param.psUniqueOutPutState>true</param.psUniqueOutPutState>
+      <param.psOpenResultsState>true</param.psOpenResultsState>
+      <param.psProductModeValue>option.psProductModeValue.codeProver</param.psProductModeValue>
+      <param.psQuickConfValue>option.psQuickConfValue.proj</param.psQuickConfValue>
+      <param.psOutputFolder>results_$codegenName$</param.psOutputFolder>
       <unset>
         <param.WorkingFolder />
         <param.SpecifiedWorkingFolder />
         <param.BuildFolder />
-        <param.SpecifiedBuildFolder />
         <param.SearchPaths />
         <param.PurelyIntegerCode />
         <param.LoopUnrollThreshold />
@@ -340,7 +339,6 @@
         <param.PreserveArrayDimensions />
         <param.EliminateSingleDimensions />
         <param.MultiInstanceCode />
-        <param.FilePartitionMethod />
         <param.GenerateComments />
         <param.CommentStyle />
         <param.MATLABSourceComments />
@@ -828,14 +826,15 @@
       </unset>
     </profile>
     <param.objective>option.objective.c</param.objective>
-    <param.WorkflowStep>fixedPoint</param.WorkflowStep>
+    <param.WorkflowStep>generateCode</param.WorkflowStep>
     <param.TestSnippets>
+      <item>TestParalaxCalc</item>
       <item>TestParalax</item>
     </param.TestSnippets>
-    <param.ExternalFcnMajority />
+    <param.ExternalFcnMajority>column</param.ExternalFcnMajority>
     <param.UseGlobals>option.UseGlobals.No</param.UseGlobals>
     <param.outputfile>${PROJECT_ROOT}\codegen\lib\ParalaxCalc_fixpt\ParalaxCalc.lib</param.outputfile>
-    <param.version />
+    <param.version>R2012a</param.version>
     <param.HasECoderFeatures>true</param.HasECoderFeatures>
     <param.HasGpuCoder>false</param.HasGpuCoder>
     <var.HasNeuralNetworkToolbox>false</var.HasNeuralNetworkToolbox>
@@ -843,11 +842,11 @@
     <param.grt.mainhtml />
     <param.CallGeneratedCodeFromTest>true</param.CallGeneratedCodeFromTest>
     <param.AutoInferDefaultFile />
-    <param.AutoInferUseVariableSize />
-    <param.AutoInferUseUnboundedSize />
-    <param.AutoInferVariableSizeThreshold />
-    <param.AutoInferUnboundedSizeThreshold />
-    <param.EnableFixedPointStep />
+    <param.AutoInferUseVariableSize>false</param.AutoInferUseVariableSize>
+    <param.AutoInferUseUnboundedSize>false</param.AutoInferUseUnboundedSize>
+    <param.AutoInferVariableSizeThreshold>1024</param.AutoInferVariableSizeThreshold>
+    <param.AutoInferUnboundedSizeThreshold>2048</param.AutoInferUnboundedSizeThreshold>
+    <param.EnableFixedPointStep>true</param.EnableFixedPointStep>
     <param.EnableScreener>true</param.EnableScreener>
     <param.AnnotationChecksum>1795203148</param.AnnotationChecksum>
     <var.LegacyTarget />
@@ -858,20 +857,20 @@
     <param.unifiedParamStorage />
     <var.gc.lastOutputRoot>codegen\lib\ParalaxCalc_fixpt</var.gc.lastOutputRoot>
     <var.gc.lastOutputType>C_CODE</var.gc.lastOutputType>
-    <var.gc.preBuildChecksum>334354737</var.gc.preBuildChecksum>
+    <var.gc.preBuildChecksum>1615265504</var.gc.preBuildChecksum>
     <var.cfi.lastOutputRoot />
     <var.cfi.preBuildChecksum />
-    <var.lastCfiTestSnippet>TestParalax</var.lastCfiTestSnippet>
-    <var.outdatedOnRestore />
-    <var.lastUserSourceChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;D:\WorkDir\Laborant\Paralaks\code\codegen\ParalaxCalc\fixpt\ParalaxCalc_fixpt.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;11902024&lt;/value&gt;&lt;/checksum&gt;</var.lastUserSourceChecksum>
+    <var.lastCfiTestSnippet>TestParalaxCalc</var.lastCfiTestSnippet>
+    <var.outdatedOnRestore>false</var.outdatedOnRestore>
+    <var.lastUserSourceChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;D:\WorkDir\Laborant\Paralaks\code\codegen\ParalaxCalc\fixpt\ParalaxCalc_fixpt.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;1169597782&lt;/value&gt;&lt;/checksum&gt;</var.lastUserSourceChecksum>
     <var.sourceSetState>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;sourceModel&gt;&lt;primarySourceFiles&gt;&lt;file&gt;D:\WorkDir\Laborant\Paralaks\code\ParalaxCalc.m&lt;/file&gt;&lt;/primarySourceFiles&gt;&lt;fixedPointSourceFiles&gt;&lt;file&gt;D:\WorkDir\Laborant\Paralaks\code\codegen\ParalaxCalc\fixpt\ParalaxCalc_fixpt.m&lt;/file&gt;&lt;/fixedPointSourceFiles&gt;&lt;fixedPointSourceRegistered&gt;true&lt;/fixedPointSourceRegistered&gt;&lt;fixedPointSourceSelected&gt;true&lt;/fixedPointSourceSelected&gt;&lt;/sourceModel&gt;</var.sourceSetState>
     <param.forceMexBuild>false</param.forceMexBuild>
-    <param.NoDefaultJIT />
+    <param.NoDefaultJIT>false</param.NoDefaultJIT>
     <param.configImportActive>false</param.configImportActive>
     <var.isGpuCoder>false</var.isGpuCoder>
     <var.notGpuCoder>true</var.notGpuCoder>
     <var.boundToGui>true</var.boundToGui>
-    <var.isConfigDialog />
+    <var.isConfigDialog>false</var.isConfigDialog>
     <var.ecoderEnabled>true</var.ecoderEnabled>
     <param.mex.outputfile>ParalaxCalc_mex</param.mex.outputfile>
     <param.grt.outputfile>ParalaxCalc</param.grt.outputfile>
@@ -883,16 +882,16 @@
     <param.CppPreserveClasses>true</param.CppPreserveClasses>
     <param.gpu.Enabled>false</param.gpu.Enabled>
     <param.gpu.KernelNamePrefix />
-    <param.gpu.SelectCudaDevice />
-    <param.gpu.MaxKernelDepth />
+    <param.gpu.SelectCudaDevice>-1</param.gpu.SelectCudaDevice>
+    <param.gpu.MaxKernelDepth>0</param.gpu.MaxKernelDepth>
     <param.gpu.MallocMode />
-    <param.gpu.MallocThreshold />
-    <param.gpu.StackLimitPerThread />
+    <param.gpu.MallocThreshold>200</param.gpu.MallocThreshold>
+    <param.gpu.StackLimitPerThread>1024</param.gpu.StackLimitPerThread>
     <param.gpu.EnableCUBLAS>false</param.gpu.EnableCUBLAS>
     <param.gpu.EnableCUSOLVER>false</param.gpu.EnableCUSOLVER>
     <param.gpu.EnableCUFFT>false</param.gpu.EnableCUFFT>
     <param.gpu.Benchmarking>false</param.gpu.Benchmarking>
-    <param.gpu.SafeBuild />
+    <param.gpu.SafeBuild>false</param.gpu.SafeBuild>
     <param.gpu.ComputeCapability />
     <param.gpu.CustomComputeCapability />
     <param.gpu.CompilerFlags />
@@ -903,27 +902,27 @@
     <var.cfiTargetLibSuppression>false</var.cfiTargetLibSuppression>
     <var.hasMatlabDeepLearningSupportPackage>true</var.hasMatlabDeepLearningSupportPackage>
     <var.hasGpuDeepLearningSupportPackage>true</var.hasGpuDeepLearningSupportPackage>
-    <param.tensorrt.DataType />
+    <param.tensorrt.DataType>option.tensorrt.datatype.fp32</param.tensorrt.DataType>
     <param.tensorrt.DataPath />
-    <param.tensorrt.NumCalibrationBatches />
-    <param.cudnn.AutoTuning />
-    <param.cudnn.DataType />
+    <param.tensorrt.NumCalibrationBatches>0</param.tensorrt.NumCalibrationBatches>
+    <param.cudnn.AutoTuning>true</param.cudnn.AutoTuning>
+    <param.cudnn.DataType>option.cudnn.datatype.fp32</param.cudnn.DataType>
     <param.cudnn.CalibrationResultFile />
-    <param.arm-compute.ArmComputeVersion />
-    <param.arm-compute.ArmArchitecture />
+    <param.arm-compute.ArmComputeVersion>option.arm-compute.version.19_05</param.arm-compute.ArmComputeVersion>
+    <param.arm-compute.ArmArchitecture>option.arm-compute.architecture.unspecified</param.arm-compute.ArmArchitecture>
     <param.TargetLang>option.TargetLang.C</param.TargetLang>
     <param.EnableAutoExtrinsicCalls>true</param.EnableAutoExtrinsicCalls>
     <param.UsePreconditions>false</param.UsePreconditions>
     <param.FeatureFlags />
     <param.FixedPointMode>option.FixedPointMode.Automatic</param.FixedPointMode>
-    <param.AutoScaleLoopIndexVariables />
+    <param.AutoScaleLoopIndexVariables>false</param.AutoScaleLoopIndexVariables>
     <param.ComputedFixedPointData>
       <ComputedEntities>
         <Function file="$(PROJECTDIR)\ParalaxCalc.m" name="ParalaxCalc" specialization="ParalaxCalc" specializationId="-1" uniqueId="ParalaxCalc">
-          <Variable name="az_out" specid="1">
-            <Column property="Kind" type="String" value="local" />
-            <Column property="SimMin" type="Double" value="0.9349151832781468" />
-            <Column property="SimMax" type="Double" value="32766.36754371009" />
+          <Variable name="az_out" specid="-1">
+            <Column property="Kind" type="String" value="output" />
+            <Column property="SimMin" type="Double" value="0.2152797284844836" />
+            <Column property="SimMax" type="Double" value="32767.873296237343" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
@@ -940,36 +939,16 @@
             <Column property="SumFractionLength" type="Double" value="30" />
             <Column property="CastBeforeSum" type="Boolean" value="true" />
           </Variable>
-          <Variable name="az_out" specid="2">
+          <Variable name="el_out" specid="-1">
             <Column property="Kind" type="String" value="output" />
-            <Column property="SimMin" type="Double" value="1.0" />
-            <Column property="SimMax" type="Double" value="32766.0" />
-            <MATLABType class="uint32" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="ProposedType" type="String" value="numerictype(0, 32, 17)" />
-            <Column property="RoundMode" type="String" value="Floor" />
-            <Column property="OverflowMode" type="String" value="Wrap" />
-            <Column property="ProductMode" type="String" value="KeepMSB" />
-            <Column property="ProductWordLength" type="Double" value="64" />
-            <Column property="ProductFractionLength" type="Double" value="30" />
-            <Column property="SumMode" type="String" value="KeepMSB" />
-            <Column property="SumWordLength" type="Double" value="64" />
-            <Column property="SumFractionLength" type="Double" value="30" />
-            <Column property="CastBeforeSum" type="Boolean" value="true" />
-          </Variable>
-          <Variable name="el_out" specid="1">
-            <Column property="Kind" type="String" value="local" />
-            <Column property="SimMin" type="Double" value="0.5794759459568019" />
-            <Column property="SimMax" type="Double" value="7647.834207321469" />
+            <Column property="SimMin" type="Double" value="-1024.8147994431836" />
+            <Column property="SimMax" type="Double" value="7368.852088316048" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="ProposedType" type="String" value="numerictype(0, 32, 19)" />
+            <Column property="ProposedType" type="String" value="numerictype(1, 32, 18)" />
             <Column property="RoundMode" type="String" value="Floor" />
             <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProductMode" type="String" value="KeepMSB" />
@@ -980,56 +959,16 @@
             <Column property="SumFractionLength" type="Double" value="30" />
             <Column property="CastBeforeSum" type="Boolean" value="true" />
           </Variable>
-          <Variable name="el_out" specid="2">
+          <Variable name="r_out" specid="-1">
             <Column property="Kind" type="String" value="output" />
-            <Column property="SimMin" type="Double" value="1.0" />
-            <Column property="SimMax" type="Double" value="7648.0" />
-            <MATLABType class="int32" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="ProposedType" type="String" value="numerictype(0, 32, 19)" />
-            <Column property="RoundMode" type="String" value="Floor" />
-            <Column property="OverflowMode" type="String" value="Wrap" />
-            <Column property="ProductMode" type="String" value="KeepMSB" />
-            <Column property="ProductWordLength" type="Double" value="64" />
-            <Column property="ProductFractionLength" type="Double" value="30" />
-            <Column property="SumMode" type="String" value="KeepMSB" />
-            <Column property="SumWordLength" type="Double" value="64" />
-            <Column property="SumFractionLength" type="Double" value="30" />
-            <Column property="CastBeforeSum" type="Boolean" value="true" />
-          </Variable>
-          <Variable name="r_out" specid="1">
-            <Column property="Kind" type="String" value="local" />
-            <Column property="SimMin" type="Double" value="80.50360930631112" />
-            <Column property="SimMax" type="Double" value="100030.44143580261" />
+            <Column property="SimMin" type="Double" value="100.18326762624454" />
+            <Column property="SimMax" type="Double" value="131096.02487517142" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="ProposedType" type="String" value="numerictype(0, 32, 15)" />
-            <Column property="RoundMode" type="String" value="Floor" />
-            <Column property="OverflowMode" type="String" value="Wrap" />
-            <Column property="ProductMode" type="String" value="KeepMSB" />
-            <Column property="ProductWordLength" type="Double" value="64" />
-            <Column property="ProductFractionLength" type="Double" value="30" />
-            <Column property="SumMode" type="String" value="KeepMSB" />
-            <Column property="SumWordLength" type="Double" value="64" />
-            <Column property="SumFractionLength" type="Double" value="30" />
-            <Column property="CastBeforeSum" type="Boolean" value="true" />
-          </Variable>
-          <Variable name="r_out" specid="2">
-            <Column property="Kind" type="String" value="output" />
-            <Column property="SimMin" type="Double" value="81.0" />
-            <Column property="SimMax" type="Double" value="100030.0" />
-            <MATLABType class="uint32" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="ProposedType" type="String" value="numerictype(0, 32, 15)" />
+            <Column property="ProposedType" type="String" value="numerictype(0, 32, 14)" />
             <Column property="RoundMode" type="String" value="Floor" />
             <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProductMode" type="String" value="KeepMSB" />
@@ -1043,7 +982,7 @@
           <Variable name="az_in" specid="-1">
             <Column property="Kind" type="String" value="input" />
             <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="32759.0" />
+            <Column property="SimMax" type="Double" value="32767.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
@@ -1062,14 +1001,14 @@
           </Variable>
           <Variable name="el_in" specid="-1">
             <Column property="Kind" type="String" value="input" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="6372.0" />
+            <Column property="SimMin" type="Double" value="-1025.0" />
+            <Column property="SimMax" type="Double" value="7281.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="ProposedType" type="String" value="numerictype(0, 32, 19)" />
+            <Column property="ProposedType" type="String" value="numerictype(1, 32, 18)" />
             <Column property="RoundMode" type="String" value="Floor" />
             <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProductMode" type="String" value="KeepMSB" />
@@ -1082,8 +1021,8 @@
           </Variable>
           <Variable name="r_in" specid="-1">
             <Column property="Kind" type="String" value="input" />
-            <Column property="SimMin" type="Double" value="100.0" />
-            <Column property="SimMax" type="Double" value="100000.0" />
+            <Column property="SimMin" type="Double" value="103.0" />
+            <Column property="SimMax" type="Double" value="131066.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
@@ -1163,7 +1102,7 @@
           <Variable name="az_in_rad" specid="-1">
             <Column property="Kind" type="String" value="local" />
             <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="6.281459578793215" />
+            <Column property="SimMax" type="Double" value="6.282993559581101" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
@@ -1182,14 +1121,14 @@
           </Variable>
           <Variable name="el_in_rad" specid="-1">
             <Column property="Kind" type="String" value="local" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="1.2218156975509131" />
+            <Column property="SimMin" type="Double" value="-0.19654128844784777" />
+            <Column property="SimMax" type="Double" value="1.3961142645744191" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="ProposedType" type="String" value="numerictype(0, 32, 31)" />
+            <Column property="ProposedType" type="String" value="numerictype(1, 32, 30)" />
             <Column property="RoundMode" type="String" value="Floor" />
             <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProductMode" type="String" value="KeepMSB" />
@@ -1202,8 +1141,8 @@
           </Variable>
           <Variable name="x_in" specid="-1">
             <Column property="Kind" type="String" value="local" />
-            <Column property="SimMin" type="Double" value="-99433.36111061057" />
-            <Column property="SimMax" type="Double" value="99518.98936104182" />
+            <Column property="SimMin" type="Double" value="-130940.7131328241" />
+            <Column property="SimMax" type="Double" value="130372.05982999282" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
@@ -1222,8 +1161,8 @@
           </Variable>
           <Variable name="y_in" specid="-1">
             <Column property="Kind" type="String" value="local" />
-            <Column property="SimMin" type="Double" value="-99078.21278565159" />
-            <Column property="SimMax" type="Double" value="98942.25902006825" />
+            <Column property="SimMin" type="Double" value="-130040.34452461335" />
+            <Column property="SimMax" type="Double" value="130538.46871011416" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
@@ -1242,14 +1181,14 @@
           </Variable>
           <Variable name="z_in" specid="-1">
             <Column property="Kind" type="String" value="local" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="93623.109978122" />
+            <Column property="SimMin" type="Double" value="-25486.139181878727" />
+            <Column property="SimMax" type="Double" value="128897.71195262311" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="ProposedType" type="String" value="numerictype(0, 32, 15)" />
+            <Column property="ProposedType" type="String" value="numerictype(1, 32, 14)" />
             <Column property="RoundMode" type="String" value="Floor" />
             <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProductMode" type="String" value="KeepMSB" />
@@ -1262,8 +1201,8 @@
           </Variable>
           <Variable name="x_out" specid="-1">
             <Column property="Kind" type="String" value="local" />
-            <Column property="SimMin" type="Double" value="-99404.36111061057" />
-            <Column property="SimMax" type="Double" value="99547.98936104182" />
+            <Column property="SimMin" type="Double" value="-130911.7131328241" />
+            <Column property="SimMax" type="Double" value="130401.05982999282" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
@@ -1282,8 +1221,8 @@
           </Variable>
           <Variable name="y_out" specid="-1">
             <Column property="Kind" type="String" value="local" />
-            <Column property="SimMin" type="Double" value="-99061.21278565159" />
-            <Column property="SimMax" type="Double" value="98959.25902006825" />
+            <Column property="SimMin" type="Double" value="-130023.34452461335" />
+            <Column property="SimMax" type="Double" value="130555.46871011416" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
@@ -1302,14 +1241,14 @@
           </Variable>
           <Variable name="z_out" specid="-1">
             <Column property="Kind" type="String" value="local" />
-            <Column property="SimMin" type="Double" value="11.0" />
-            <Column property="SimMax" type="Double" value="93634.109978122" />
+            <Column property="SimMin" type="Double" value="-25475.139181878727" />
+            <Column property="SimMax" type="Double" value="128908.71195262311" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="ProposedType" type="String" value="numerictype(0, 32, 15)" />
+            <Column property="ProposedType" type="String" value="numerictype(1, 32, 14)" />
             <Column property="RoundMode" type="String" value="Floor" />
             <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProductMode" type="String" value="KeepMSB" />
@@ -1322,14 +1261,14 @@
           </Variable>
           <Variable name="el_out_rad" specid="-1">
             <Column property="Kind" type="String" value="local" />
-            <Column property="SimMin" type="Double" value="1.1111312101744902E-4" />
-            <Column property="SimMax" type="Double" value="1.4664538428707181" />
+            <Column property="SimMin" type="Double" value="-0.19650577668584" />
+            <Column property="SimMax" type="Double" value="1.4129596915309754" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="ProposedType" type="String" value="numerictype(0, 32, 31)" />
+            <Column property="ProposedType" type="String" value="numerictype(1, 32, 30)" />
             <Column property="RoundMode" type="String" value="Floor" />
             <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProductMode" type="String" value="KeepMSB" />
@@ -1342,8 +1281,8 @@
           </Variable>
           <Variable name="az_out_rad" specid="-1">
             <Column property="Kind" type="String" value="local" />
-            <Column property="SimMin" type="Double" value="-3.1415853101129234" />
-            <Column property="SimMax" type="Double" value="6.282872287606363" />
+            <Column property="SimMin" type="Double" value="-3.1415139058349006" />
+            <Column property="SimMax" type="Double" value="6.283161012037378" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
@@ -1366,16 +1305,13 @@
     <param.UserFixedPointData>
       <UserEntities>
         <Function file="$(PROJECTDIR)\ParalaxCalc.m" name="ParalaxCalc" specialization="ParalaxCalc" specializationId="-1" uniqueId="ParalaxCalc">
-          <Variable name="az_out" specid="1" />
-          <Variable name="az_out" specid="2">
+          <Variable name="az_out" specid="-1">
             <Column property="LoggingEnabled" type="Boolean" value="true" />
           </Variable>
-          <Variable name="el_out" specid="1" />
-          <Variable name="el_out" specid="2">
+          <Variable name="el_out" specid="-1">
             <Column property="LoggingEnabled" type="Boolean" value="true" />
           </Variable>
-          <Variable name="r_out" specid="1" />
-          <Variable name="r_out" specid="2">
+          <Variable name="r_out" specid="-1">
             <Column property="LoggingEnabled" type="Boolean" value="true" />
           </Variable>
           <Variable name="az_in" specid="-1">
@@ -1416,11 +1352,11 @@
     <param.ShowCoverage>true</param.ShowCoverage>
     <param.ExcludedFixedPointVerificationFiles />
     <param.ExcludedFixedPointSimulationFiles />
-    <param.InstrumentedBuildChecksum>2948404049</param.InstrumentedBuildChecksum>
+    <param.InstrumentedBuildChecksum>3665647040</param.InstrumentedBuildChecksum>
     <param.FixedPointStaticAnalysisChecksum />
     <param.InstrumentedMexFile>${PROJECT_ROOT}\codegen\ParalaxCalc\fixpt\ParalaxCalc_float_mex.mexw64</param.InstrumentedMexFile>
-    <param.FixedPointValidationChecksum>379780029</param.FixedPointValidationChecksum>
-    <param.FixedPointSourceCodeChecksum>3019901544</param.FixedPointSourceCodeChecksum>
+    <param.FixedPointValidationChecksum>3616768549</param.FixedPointValidationChecksum>
+    <param.FixedPointSourceCodeChecksum>3094838560</param.FixedPointSourceCodeChecksum>
     <param.FixedPointFunctionReplacements>
       <FunctionReplacements />
     </param.FixedPointFunctionReplacements>
@@ -1432,16 +1368,16 @@
     <param.EnableCodeEfficiencyChecks>false</param.EnableCodeEfficiencyChecks>
     <param.DefaultFixedPointSignedness>option.DefaultFixedPointSignedness.Automatic</param.DefaultFixedPointSignedness>
     <param.FixedPointTypeProposalMode>option.FixedPointTypeProposalMode.ProposeFractionLengths</param.FixedPointTypeProposalMode>
-    <param.EnableFixedPointStep />
+    <param.EnableFixedPointStep>true</param.EnableFixedPointStep>
     <var.lastFixedPointAction>option.fixedPointAction.verify</var.lastFixedPointAction>
-    <var.lastSimContext>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;SimulationContext&gt;&lt;testFiles&gt;&lt;file&gt;D:\WorkDir\Laborant\Paralaks\code\TestParalax.mlx&lt;/file&gt;&lt;/testFiles&gt;&lt;synthetic&gt;false&lt;/synthetic&gt;&lt;/SimulationContext&gt;</var.lastSimContext>
-    <var.lastVerifyContext>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;SimulationContext&gt;&lt;testFiles&gt;&lt;file&gt;D:\WorkDir\Laborant\Paralaks\code\TestParalax.mlx&lt;/file&gt;&lt;/testFiles&gt;&lt;syntheticCode&gt;&lt;/syntheticCode&gt;&lt;synthetic&gt;false&lt;/synthetic&gt;&lt;/SimulationContext&gt;</var.lastVerifyContext>
+    <var.lastSimContext>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;SimulationContext&gt;&lt;testFiles&gt;&lt;file&gt;D:\WorkDir\Laborant\Paralaks\code\TestParalaxCalc.mlx&lt;/file&gt;&lt;/testFiles&gt;&lt;synthetic&gt;false&lt;/synthetic&gt;&lt;/SimulationContext&gt;</var.lastSimContext>
+    <var.lastVerifyContext>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;SimulationContext&gt;&lt;testFiles&gt;&lt;file&gt;D:\WorkDir\Laborant\Paralaks\code\TestParalaxCalc.mlx&lt;/file&gt;&lt;/testFiles&gt;&lt;syntheticCode&gt;&lt;/syntheticCode&gt;&lt;synthetic&gt;false&lt;/synthetic&gt;&lt;/SimulationContext&gt;</var.lastVerifyContext>
     <param.fpDataRoot>D:\WorkDir\Laborant\Paralaks\code\codegen\ParalaxCalc\fixpt/guiFpReport.mat</param.fpDataRoot>
-    <param.fpUserFileChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;D:\WorkDir\Laborant\Paralaks\code\ParalaxCalc.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;3774112691&lt;/value&gt;&lt;/checksum&gt;</param.fpUserFileChecksum>
-    <var.snapshotChecksum>3273992382</var.snapshotChecksum>
-    <param.fpLastConvertChecksum>2948404049</param.fpLastConvertChecksum>
+    <param.fpUserFileChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;D:\WorkDir\Laborant\Paralaks\code\ParalaxCalc.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;3968013563&lt;/value&gt;&lt;/checksum&gt;</param.fpUserFileChecksum>
+    <var.snapshotChecksum>3521013205</var.snapshotChecksum>
+    <param.fpLastConvertChecksum>3665647040</param.fpLastConvertChecksum>
     <var.functionBlockSid />
-    <param.fptSignedness />
+    <param.fptSignedness>false</param.fptSignedness>
     <var.FixedPointAnalysisMode>option.FixedPointAnalysisMode.Sim</var.FixedPointAnalysisMode>
     <param.FixedPointUseDesignRanges>false</param.FixedPointUseDesignRanges>
     <unset>
@@ -1547,7 +1483,7 @@
       </file>
     </fileset.entrypoints>
     <fileset.testbench>
-      <file>${PROJECT_ROOT}\TestParalax.mlx</file>
+      <file>${PROJECT_ROOT}\TestParalaxCalc.mlx</file>
     </fileset.testbench>
     <fileset.inputtypes>
       <file custom-data-expanded="false" value="${PROJECT_ROOT}\ParalaxCalc.m">

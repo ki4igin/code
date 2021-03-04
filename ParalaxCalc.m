@@ -34,7 +34,7 @@ function [az_out, el_out, r_out] = ParalaxCalc(az_in, el_in, r_in)
     az_out = az_out_rad * 2^14 / pi;
     el_out = el_out_rad * 2^14 / pi;
 
-    az_out = uint32(az_out);
-    el_out = int32(el_out);
-    r_out = uint32(r_out);
+%     az_out = uint32(az_out);
+%     el_out = int32(el_out);
+%     r_out = uint32(r_out);
 end

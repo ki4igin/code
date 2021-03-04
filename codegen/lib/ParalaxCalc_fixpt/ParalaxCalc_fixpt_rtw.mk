@@ -2,7 +2,7 @@
 ## Makefile generated for component 'ParalaxCalc_fixpt'. 
 ## 
 ## Makefile     : ParalaxCalc_fixpt_rtw.mk
-## Generated on : Sun Feb 28 17:26:35 2021
+## Generated on : Mon Mar 01 15:58:17 2021
 ## Final product: ./ParalaxCalc.lib
 ## Product type : static-library
 ## 
@@ -222,7 +222,7 @@ DEFINES = $(DEFINES_) $(DEFINES_CUSTOM) $(DEFINES_SKIPFORSIL) $(DEFINES_STANDARD
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(START_DIR)/ParalaxCalc_fixpt_data.c $(START_DIR)/ParalaxCalc_fixpt_initialize.c $(START_DIR)/ParalaxCalc_fixpt.c $(START_DIR)/cos.c $(START_DIR)/sin.c $(START_DIR)/atan2_fi_lut_private.c
+SRCS = $(START_DIR)/ParalaxCalc_fixpt.c
 
 ALL_SRCS = $(SRCS)
 
@@ -230,7 +230,7 @@ ALL_SRCS = $(SRCS)
 ## OBJECTS
 ###########################################################################
 
-OBJS = ParalaxCalc_fixpt_data.o ParalaxCalc_fixpt_initialize.o ParalaxCalc_fixpt.o cos.o sin.o atan2_fi_lut_private.o
+OBJS = ParalaxCalc_fixpt.o
 
 ALL_OBJS = $(OBJS)
 
@@ -502,27 +502,7 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS)
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-ParalaxCalc_fixpt_data.o : $(START_DIR)/ParalaxCalc_fixpt_data.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-ParalaxCalc_fixpt_initialize.o : $(START_DIR)/ParalaxCalc_fixpt_initialize.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
 ParalaxCalc_fixpt.o : $(START_DIR)/ParalaxCalc_fixpt.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-cos.o : $(START_DIR)/cos.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-sin.o : $(START_DIR)/sin.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-atan2_fi_lut_private.o : $(START_DIR)/atan2_fi_lut_private.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
